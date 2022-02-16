@@ -54,10 +54,11 @@ function setResult(){
         let newElement = document.createElement('button');  //creates <button> tag
         newElement.type = 'button';
         newElement.innerHTML = '상품추천'
-        newElement.onclick = function(){
+        recommendation = function(){
             window.open("https://seattle9.cafe24.com");
         }
-        newElement.onclick = 'window.location="https://seattle9.cafe24.com"';
+        newElement.addEventListener("click", recommendation, false) //false is default except for safari/IE, so I added this.
+
         document.body.appendChild(newElement);
         console.log(newElement);
 
