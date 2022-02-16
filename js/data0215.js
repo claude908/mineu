@@ -93,10 +93,10 @@ const qnaList = [
 const infoList = [
   {
     name: '', //Something about an introvert <내향적>
-    desc: '컨텐츠 기입할 부분'
+    desc: ''
   },
   {
     name: '', //Context Textholder Extrovert <외향적>
-    desc: '컨텐츠 기입할 부분'
+    desc: ''
   }
 ]
