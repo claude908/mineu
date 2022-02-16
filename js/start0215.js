@@ -47,18 +47,16 @@ function setResult(){
         resultImg.alt = point;                                      //alt attribute is officially MANDATORY
         resultImg.classList.add('img-fluid');
         resultImg.classList.add('py-4');
+        resultImg.classList.add('fade-in');
         imgDiv.appendChild(resultImg);
         }
 
-/* ORIGINAL
-    var resultImg = document.createElement('img');
-    const imgDiv = document.querySelector('#resultImg');    //selecting the id resultImg from html file
-    var imgURL = 'http://mineu.site/wp-content/uploads/2022/02/image-' + point + '.png';    //Format the images as such
-    resultImg.src = imgURL;
-    resultImg.alt = point;                                      //alt attribute is officially MANDATORY
-    resultImg.classList.add('img-fluid');
-    imgDiv.appendChild(resultImg);
- */
+    var btnCreate = document.createElement('button');
+    const btnconst = document.querySelector('resultImg');
+    btnCreate.classList.add('fade-in')
+    btnCreate.classList.add('py-5')
+    btnCreate.style.add('background-color: red;')
+    btnconst.appendChild(btnCreate);
 
     const resultDesc = document.querySelector('.resultDesc');   //querySelector calls information from a table/database (in this case from data.js)
     resultDesc.innerHTML = infoList[point].desc;
