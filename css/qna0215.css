@@ -101,6 +101,7 @@ body{
     height: 100%;
     overflow: hidden;
     pointer-events: none; /* makes "click-through" https://stackoverflow.com/questions/3680429/click-through-div-to-underlying-elements */
+    z-index: 0;
 }
 
 .circles li{

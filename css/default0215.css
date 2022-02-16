@@ -5,7 +5,7 @@ html,
 body {
     height: 100%;
     background: radial-gradient(ellipse at center, #fffeea 0%, #fffeea 35%, #b7e8eb 100%);
-
+    z-index:0;
     /*background-repeat:no-repeat;*/
   }
 

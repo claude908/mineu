@@ -51,12 +51,67 @@ function setResult(){
         imgDiv.appendChild(resultImg);
         }
 
-    var btnCreate = document.createElement('button');
-    const btnconst = document.querySelector('resultImg');
-    btnCreate.classList.add('fade-in')
-    btnCreate.classList.add('py-5')
+        let newElement = document.createElement('button');  //creates <button> tag
+        newElement.type = 'button';
+        newElement.innerHTML = '상품추천'
+        newElement.onclick = function(){
+            window.open("https://seattle9.cafe24.com");
+        }
+        newElement.onclick = 'window.location="https://seattle9.cafe24.com"';
+        document.body.appendChild(newElement);
+        console.log(newElement);
+
+
+/*         function add(type) {
+            //Create an input type dynamically.   
+            var element = document.createElement("input");
+            //Assign different attributes to the element. 
+            element.type = 'button';
+            element.value = 'worksifyouseethis'; // Really? You want the default value to be the type string?
+            element.name = 'test'; // And the name too?
+            element.onclick = function() { // Note this is a function
+              alert("blabla");
+            };
+          
+            var foo = document.getElementById("dynamicbtn");
+            //Append the element in page (in span).  
+            foo.appendChild(element);
+          }
+          document.getElementById("btnAdd").onclick = function() {
+            add("text");
+          }; */
+
+/*     var btnCreate = document.createElement('button');
+    //const btnconst = document.querySelector('resultImg');
+    button.type = 'button';
+    button.innerHTML = '다이어트 상품추천';
+    button.className = 'btn-styled';
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.innerHTML = 'Press me';
+     
+        button.onclick = function() {
+            window.location.href = 'https://seattle9.cafe24.com'
+        };
+     
+        var dynamicbtn = document.getElementById('dynamicbtn');
+        dynamicbtn.appendChild(button);
+    }, false);
+
+
+
+    var test1 = document.getElementById('dynamicbtn');
+    dynamicbtn.appendchild(button);
+    btnCreate.classList.add('fade-in');
+    btnCreate.classList.add('py-5');
     btnCreate.style.add('background-color: red;')
     btnconst.appendChild(btnCreate);
+ */
+    
+
 
     const resultDesc = document.querySelector('.resultDesc');   //querySelector calls information from a table/database (in this case from data.js)
     resultDesc.innerHTML = infoList[point].desc;
