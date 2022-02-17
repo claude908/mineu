@@ -1,8 +1,12 @@
+
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const endPoint = 11;
 const result = document.querySelector("#result");
 const select = [];
+
+
+
 
 function calcResult(){
     var pointArray = [
@@ -145,3 +149,11 @@ function begin(){
     }, 450)
 
 }
+
+gsap.from('.qBox', {duration: 3, y: '-200%', ease: 'bounce'})
+
+gsap.to(".resultBtn", {
+    x:400,
+    rotation: 360,
+    duration: 3
+});
