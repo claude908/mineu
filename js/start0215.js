@@ -114,6 +114,8 @@ function addAnswer(answerText, qIdx, idx){                       //data.js 에�
             }
             goNext(++qIdx);     //위의 이벤트가 끝나면 바로 goNext 함수를 실행하되 인덱스 값이 1 증가함.
         }, 450)
+        gsap.from('.qBox', {duration: 1, y: '-200%', ease: 'bounce'}) // NOT SURE IF THIS SHOULD BE HERE
+
     }, false);
 }
 
@@ -150,10 +152,10 @@ function begin(){
 
 }
 
-gsap.from('.qBox', {duration: 3, y: '-200%', ease: 'bounce'})
 
-gsap.to(".resultBtn", {
-    x:400,
+gsap.to("#resultBtn", {
+    x:40,
     rotation: 360,
-    duration: 3
+    duration: 3,
+    repeat: -1
 });
