@@ -10,3 +10,27 @@
     color:red;
     background-color: rosybrown;
 }
+
+.bubble{
+    color: orange;
+    font-weight: bold;
+    background-color: black;
+}
+
+.popBubble{
+    background-color: whitesmoke;
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    border-color: burlywood;
+    border:0px;
+    font-size: 20px;
+    z-index:100;
+}
+
+.popBubble:hover, .popBubble:focus{
+    background-color: grey;
+    color: white;
+    z-index:100;
+
+}

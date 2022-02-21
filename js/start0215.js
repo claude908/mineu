@@ -57,18 +57,53 @@ function setResult(){
 
     const btnDiv = document.querySelector('#resultBtn')
     let newElement = document.createElement('button');  //creates <button> tag
-    newElement.type = 'button';
+    newElement.type = 'button1';
+    newElement.style = "my-5 py-3 mx-auto"
     newElement.innerHTML = '상품추천'
     recommendation = function(){
         window.open("https://seattle9.cafe24.com");
         }
-        newElement.addEventListener("click", recommendation, false) //false is default except for safari/IE, so I added this.
-        newElement.style.animation = "fadein 0.5s";
-        btnDiv.appendChild(newElement);
-        console.dir(newElement);
+    newElement.addEventListener("click", recommendation, false) //false is default except for safari/IE, so I added this.
+    newElement.style.animation = "fadein 0.5s";
+    btnDiv.appendChild(newElement);
+    console.dir(newElement);    //shows all the properties of the butten on the console
 
     const resultDesc = document.querySelector('.resultDesc');   //querySelector calls information from a table/database (in this case from data.js)
     resultDesc.innerHTML = infoList[point].desc;
+
+
+    for(j=0; j<2; j++){
+                //speech bubble(class)
+    var bubble = document.querySelector('.speechBubble');
+    var bubbleStyle = document.createElement('div');
+    bubbleStyle.classList.add('popBubble');
+    bubbleStyle.classList.add('my-3');
+    bubbleStyle.classList.add('py-3');
+    bubbleStyle.classList.add('mx-auto');
+    bubbleStyle.classList.add('pick'+j);
+    /* bubbleStyle.classList.add('GSAP ANIMATION IF POSSIBLE') */
+    bubble.appendChild(bubbleStyle);
+    } 
+    var reco1 = document.querySelectorAll('.pick0')
+    var reco2 = document.querySelectorAll('.pick1')
+
+    reco1.innerHTML = "진단결과가 마음에 드셨나요?";
+    reco2.innerHTML = "그럼 당신만을 위한 맞춤형 다이어트 식품을 추천 드릴게요.";
+    
+ /*         if(j=0){
+            j.innerHTML = "진단결과가 마음에 드셨나요?";
+            bubble.appendChild(bubbleStyle); 
+      
+        }
+
+        if(j=1){
+            j.innerHTML = "그럼 당신만을 위한 맞춤형 다이어트 식품을 추천 드릴게요.";
+            bubble.appendChild(bubbleStyle); 
+  
+        }
+    } */
+
+
 }
 
 function goResult(){
@@ -114,7 +149,7 @@ function addAnswer(answerText, qIdx, idx){                       //data.js 에�
             }
             goNext(++qIdx);     //위의 이벤트가 끝나면 바로 goNext 함수를 실행하되 인덱스 값이 1 증가함.
         }, 450)
-        gsap.from('.qBox', {duration: 1, y: '-200%', ease: 'bounce'}) // NOT SURE IF THIS SHOULD BE HERE
+//        gsap.to('.qBox', {duration: 1, y: '-200%', ease: 'bounce'}) // NOT SURE IF THIS SHOULD BE HERE
 
     }, false);
 }
@@ -153,9 +188,9 @@ function begin(){
 }
 
 
-gsap.to("#resultBtn", {
+/* gsap.to("#resultBtn", {
     x:40,
     rotation: 360,
     duration: 3,
     repeat: -1
-});
+}); */
