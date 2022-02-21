@@ -1,9 +1,10 @@
-
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const endPoint = 11;
 const result = document.querySelector("#result");
 const select = [];
+gsap.registerPlugin(ScrollTrigger);
+
 
 
 
@@ -84,6 +85,63 @@ function setResult(){
        /* bubbleStyle.classList.add('GSAP ANIMATION IF POSSIBLE') */
        bubble.appendChild(bubbleStyle);    
     }
+
+    gsap.utils.toArray(".popBubble").forEach(function (elem) {
+        ScrollTrigger.create({
+          trigger: elem,
+          start: "top 80%",
+          end: "bottom 20%",
+          markers: true,
+          onEnter: function () {
+            gsap.fromTo(
+              elem,
+              { y: 100, autoAlpha: 1, opacity: 0 },
+              {
+                duration: 3.125,
+                y: 0,
+                autoAlpha: 1,
+                ease: "back",
+                overwrite: "auto",
+                opacity: 1
+              }
+                        );
+                                }
+                            })                               }
+                                            );
+      
+
+
+
+
+
+/*     gsap.to(".popBubble", {
+        x: '50%',
+        duration: 6,
+        scrollTrigger: {
+            trigger:".speechBubble",
+            start: "center 90%",
+            markers: true
+        }}) */
+
+
+
+
+
+
+
+
+/*     const boxes = gsap.utils.toArray('.popBubble');
+
+    boxes.forEach((popBubble, i) => {
+    const anim = gsap.fromTo(popBubble, {autoAlpha: 0, y: 50}, {duration: 1, autoAlpha: 1, y: 0});
+    ScrollTrigger.create({
+        trigger: popBubble,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
+        markers: true
+        });
+    }); */
 
 }
 
