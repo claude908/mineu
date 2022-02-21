@@ -72,37 +72,18 @@ function setResult(){
     resultDesc.innerHTML = infoList[point].desc;
 
 
-    for(j=0; j<2; j++){
-                //speech bubble(class)
     var bubble = document.querySelector('.speechBubble');
-    var bubbleStyle = document.createElement('div');
-    bubbleStyle.classList.add('popBubble');
-    bubbleStyle.classList.add('my-3');
-    bubbleStyle.classList.add('py-3');
-    bubbleStyle.classList.add('mx-auto');
-    bubbleStyle.classList.add('pick'+j);
-    /* bubbleStyle.classList.add('GSAP ANIMATION IF POSSIBLE') */
-    bubble.appendChild(bubbleStyle);
-    } 
-    var reco1 = document.querySelectorAll('.pick0')
-    var reco2 = document.querySelectorAll('.pick1')
-
-    reco1.innerHTML = "진단결과가 마음에 드셨나요?";
-    reco2.innerHTML = "그럼 당신만을 위한 맞춤형 다이어트 식품을 추천 드릴게요.";
-    
- /*         if(j=0){
-            j.innerHTML = "진단결과가 마음에 드셨나요?";
-            bubble.appendChild(bubbleStyle); 
-      
-        }
-
-        if(j=1){
-            j.innerHTML = "그럼 당신만을 위한 맞춤형 다이어트 식품을 추천 드릴게요.";
-            bubble.appendChild(bubbleStyle); 
-  
-        }
-    } */
-
+    for(j=0; j<2; j++){
+       var bubbleStyle = document.createElement('div');
+       bubbleStyle.classList.add('popBubble');
+       bubbleStyle.classList.add('my-3');
+       bubbleStyle.classList.add('py-3');
+       bubbleStyle.classList.add('mx-auto');
+       bubbleStyle.classList.add('pick'+j);
+       bubbleStyle.innerHTML = resultMsg[j].pop;
+       /* bubbleStyle.classList.add('GSAP ANIMATION IF POSSIBLE') */
+       bubble.appendChild(bubbleStyle);    
+    }
 
 }
 

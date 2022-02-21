@@ -100,3 +100,12 @@ const infoList = [
     desc: ''
   }
 ]
+
+const resultMsg = [
+  {
+    pop: '진단결과가 마음에 드셨나요?'
+  },
+  {
+    pop: '그럼 당신만을 위한 맞춤형 다이어트 식품을 추천 드릴게요.'
+  }
+]
