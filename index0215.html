@@ -16,23 +16,19 @@
     <meta propety="og:description" content="심리검사를 통한 데이터기반 다이어트 상품추천" />
 
     <!-- favicon -->
-
-    <!-- GSAP (tool for JS) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    
+   
 
 <!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js" integrity="sha512-agNfXmEo6F+qcj3WGryaRvl9X9wLMQORbTt5ACS9YVqzKDMzhRxY+xjgO45HCLm61OwHWR1Oblp4QSw/SGh9SA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
  -->    
 
     <title>다이어트 상품추천</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/default0215.css">
+    <link rel="stylesheet" href="./css/default0221.css">
     <!-- <link rel="stylesheet" href="./css/main0215.css"> -->
-    <link rel="stylesheet" href="./css/qna0215.css">
-    <link rel="stylesheet" href="./css/animation0215.css">
-    <link rel="stylesheet" href="./css/result0215.css">
-    <link rel="stylesheet" href="./css/qna0215.css"
+    <link rel="stylesheet" href="./css/qna0221.css">
+    <link rel="stylesheet" href="./css/animation0221.css">
+    <link rel="stylesheet" href="./css/result0221.css">
+    <link rel="stylesheet" href="./css/qna0221.css"
 
 <!--아래는폰트-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +39,7 @@
 </head>
 
 
-<body onload="setTimeout('begin()', 1600);">
+<body onload="setTimeout('begin()', 160);">
     <div class="container">
         
         <div class="loader"></div>
@@ -73,31 +69,39 @@
                 <li></li>
         </ul>
         </section>
-        
-        <section id="result">           <!--    RESULT PAGE     -->
-            <!-- <div class="loader"></div> THIS IS NOT USED APPARENTLY 03:02PM 02182022 -->
-            <h1 style="text-align: center;"></h1><!--결과창-->
-            <div id="resultImg" class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto my-5 padding"></div>
-            <div class="resultName" style="position: relative; text-align: center; font-size: large;"></div>
-            <div class="resultDesc"></div>
-
-            <div class="speechBubble"></div>
-            <div id="resultBtn"></div>
+        <section id="last">
+            <section id="result">           <!--    RESULT PAGE     -->
+                <!-- <div class="loader"></div> THIS IS NOT USED APPARENTLY 03:02PM 02182022 -->
+                <h1 style="text-align: center;"></h1><!--결과창-->
+                <div id="resultImg" class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto my-5 padding"></div>
+                <div class="resultName" style="position: relative; text-align: center; font-size: large;"></div>
+                <div class="resultDesc"></div>
+            <section id="recommendation">
+                <div class="speechBubble"></div>
+                <div id="resultBtn"></div>
+            </section>
+            </section>
         </section>
-        <script src="./js/data0215.js" charset="utf-8"></script>
-        <script src="./js/start0215.js" charset="utf-8"></script>
+        <script src="./js/data0221.js" charset="utf-8"></script>
+        <script src="./js/start0221.js" charset="utf-8"></script>
+
+        <!-- GSAP (tool for JS) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+            
+        <!-- loader fadesout-->
         <script>
             $(document).ready(function(){
-                $('.loader').delay('1500').fadeOut();
+                $('.loader').delay('150').fadeOut();
                 });
             </script>
-        <script>
+<!--         <script>
             gsap.registerPlugin(ScrollTrigger);
     
             ScrollTrigger.defaults({
                 markers: true
             });
-        </script>
+        </script> -->
             
     </div>
 </body>

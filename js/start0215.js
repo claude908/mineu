@@ -40,7 +40,7 @@ function calcResult(){
 }
 
 function setResult(){
-    let point = calcResult();
+    let point = calcResult();       //The "key" of the mbti type
     const resultName = document.querySelector('.resultName');   //Currently not used but bring back and add animation
     resultName.innerHTML = infoList[point].name;                //Currently not used but bring back and add animation
 
@@ -59,11 +59,17 @@ function setResult(){
     const btnDiv = document.querySelector('#resultBtn')
     let newElement = document.createElement('button');  //creates <button> tag
     newElement.type = 'button1';
+    newElement.classList.add('rsltBtn');
     newElement.style = "my-5 py-3 mx-auto"
-    newElement.innerHTML = '상품추천'
+    newElement.innerHTML = '추천상품 받기'
     recommendation = function(){
-        window.open("https://seattle9.cafe24.com");
+        if(point == 0){     //introvert
+            window.open("http://naver.me/GB0TCCPe");
         }
+        if(point == 1){
+            window.open("https://smartstore.naver.com/mineu/products/4083519754?")
+        }
+            }
     newElement.addEventListener("click", recommendation, false) //false is default except for safari/IE, so I added this.
     newElement.style.animation = "fadein 0.5s";
     btnDiv.appendChild(newElement);
@@ -81,34 +87,66 @@ function setResult(){
        bubbleStyle.classList.add('py-3');
        bubbleStyle.classList.add('mx-auto');
        bubbleStyle.classList.add('pick'+j);
+       /* bubbleStyle.classList.add('animated'); */
+       /* bubbleStyle.classList.add('fadeInUp'); */
        bubbleStyle.innerHTML = resultMsg[j].pop;
        /* bubbleStyle.classList.add('GSAP ANIMATION IF POSSIBLE') */
        bubble.appendChild(bubbleStyle);    
     }
 
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.intersectionRatio > 0){
+                entry.target.classList.add("animated");
+            }
+            else {
+                entry.target.classList.remove('animated');
+            }
+        })
+    })
+
+    const look = document.querySelectorAll('.popBubble');
+    look.forEach((el) => {
+        observer.observe(el);
+    })
+/*     observer.observe(document.querySelector(".speechBubble")); */
+/*     gsap.from(".popBubble", {
+        y: 300,
+        duration: 3,
+        scrollTrigger: {
+            trigger: "#resultImg",
+            start: "30vh",
+            end: "50vh",
+            opacity: 1,
+            markers: true
+        }
+    });
+ */
+
+/* 
     gsap.utils.toArray(".popBubble").forEach(function (elem) {
         ScrollTrigger.create({
-          trigger: elem,
-          start: "top 80%",
-          end: "bottom 20%",
+          trigger: ".speechBubble",
+          start: "top 40%",
+          end: "bottom center",
           markers: true,
           onEnter: function () {
-            gsap.fromTo(
+            gsap.from(
               elem,
-              { y: 100, autoAlpha: 1, opacity: 0 },
               {
+                  start: "top center",
                 duration: 3.125,
-                y: 0,
-                autoAlpha: 1,
-                ease: "back",
-                overwrite: "auto",
-                opacity: 1
+                y: 100,
+                opacity: 0,
+                ease: "circ",
+                overwrite: "auto"
               }
                         );
                                 }
                             })                               }
                                             );
-      
+ */      
 
 
 

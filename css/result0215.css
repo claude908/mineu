@@ -11,10 +11,11 @@
     background-color: rosybrown;
 }
 
-.bubble{
+.speechBubble{
     color: orange;
     font-weight: bold;
-    background-color: black;
+    position: relative;
+    text-align: center;
 }
 
 .popBubble{
@@ -25,12 +26,21 @@
     border-color: burlywood;
     border:0px;
     font-size: 20px;
-    z-index:100;
+    position: relative;
 }
 
 .popBubble:hover, .popBubble:focus{
     background-color: grey;
     color: white;
-    z-index:100;
 
+}
+
+.pick0{
+    color:black;
+    position: relative;
+}
+
+.pick0{
+    color: darkkhaki;
+    position: relative;
 }
