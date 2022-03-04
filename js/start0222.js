@@ -3,7 +3,6 @@ const qna = document.querySelector("#qna");
 const endPoint = 11;
 const result = document.querySelector("#result");
 const select = [];
-gsap.registerPlugin(ScrollTrigger);
 
 
 
@@ -53,6 +52,7 @@ function setResult(){
         resultImg.classList.add('img-fluid');
         resultImg.classList.add('py-4');
         resultImg.classList.add('fade-in');
+        resultImg.classList.add('point' + point);
         imgDiv.appendChild(resultImg);
         }
 
@@ -60,14 +60,17 @@ function setResult(){
     let newElement = document.createElement('button');  //creates <button> tag
     newElement.type = 'button1';
     newElement.classList.add('rsltBtn');
-    newElement.style = "my-5 py-3 mx-auto"
-    newElement.innerHTML = '추천상품 받기'
+    newElement.classList.add('btn-2');
+    newElement.classList.add('btn-sep');
+    newElement.classList.add('icon-cart');
+    newElement.style = ("my-5 py-3 mx-auto");
+    newElement.innerHTML = '구매하기'
     recommendation = function(){
         if(point == 0){     //introvert
-            window.open("http://naver.me/GB0TCCPe");
+            window.open("https://smartstore.naver.com/mineu/products/3791962340?"); //one product
         }
-        if(point == 1){
-            window.open("https://smartstore.naver.com/mineu/products/4083519754?")
+        if(point == 1){     //extrovert
+            window.open("https://smartstore.naver.com/mineu/products/4083519754?"); //three products
         }
             }
     newElement.addEventListener("click", recommendation, false) //false is default except for safari/IE, so I added this.
@@ -100,86 +103,19 @@ function setResult(){
             if(entry.intersectionRatio > 0){
                 entry.target.classList.add("animated");
             }
-            else {
-                entry.target.classList.remove('animated');
-            }
+/*             else {
+                entry.target.classList.remove('animated');      // elemnts @ bottom of screen makes it look clanky
+            } */
         })
     })
-
     const look = document.querySelectorAll('.popBubble');
+    const pay = document.querySelectorAll('.rbclass')
     look.forEach((el) => {
         observer.observe(el);
     })
-/*     observer.observe(document.querySelector(".speechBubble")); */
-/*     gsap.from(".popBubble", {
-        y: 300,
-        duration: 3,
-        scrollTrigger: {
-            trigger: "#resultImg",
-            start: "30vh",
-            end: "50vh",
-            opacity: 1,
-            markers: true
-        }
-    });
- */
-
-/* 
-    gsap.utils.toArray(".popBubble").forEach(function (elem) {
-        ScrollTrigger.create({
-          trigger: ".speechBubble",
-          start: "top 40%",
-          end: "bottom center",
-          markers: true,
-          onEnter: function () {
-            gsap.from(
-              elem,
-              {
-                  start: "top center",
-                duration: 3.125,
-                y: 100,
-                opacity: 0,
-                ease: "circ",
-                overwrite: "auto"
-              }
-                        );
-                                }
-                            })                               }
-                                            );
- */      
-
-
-
-
-
-/*     gsap.to(".popBubble", {
-        x: '50%',
-        duration: 6,
-        scrollTrigger: {
-            trigger:".speechBubble",
-            start: "center 90%",
-            markers: true
-        }}) */
-
-
-
-
-
-
-
-
-/*     const boxes = gsap.utils.toArray('.popBubble');
-
-    boxes.forEach((popBubble, i) => {
-    const anim = gsap.fromTo(popBubble, {autoAlpha: 0, y: 50}, {duration: 1, autoAlpha: 1, y: 0});
-    ScrollTrigger.create({
-        trigger: popBubble,
-        animation: anim,
-        toggleActions: 'play none none none',
-        once: true,
-        markers: true
-        });
-    }); */
+    pay.forEach((el) => {
+        observer.observe(el);
+    })
 
 }
 

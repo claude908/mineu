@@ -1,6 +1,6 @@
 #qna{
     display: none;
-    overflow:hidden;
+    /* overflow:hidden; */
     width:100%
 }
 
@@ -23,6 +23,9 @@
     border:0px;
     font-size: 20px;
     z-index:100;
+    overflow:visible;
+    white-space: normal !important;
+    
 }
 
 .answerList:hover, .answerList:focus{
