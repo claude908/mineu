@@ -25,11 +25,14 @@
     z-index:1;
     overflow:visible;
     white-space: normal !important;
+    color: black !important;
     
 }
 
 .answerList:hover, .answerList:focus{
-    border-color: #cc835d #cc835d #cc835d #cc835d;
+    border-color: #cc835d #cc835d #cc835d #cc835d !important;
+    background: none !important;
+    color: black !important;
     /* border-width: 5px; */
 /*     background-color: grey;
     color: white;
