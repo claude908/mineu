@@ -6,28 +6,30 @@
     object-fit:contain;
     min-height: fit-content;
     min-width: fit-content;
+	margin-left:auto;
+	margin-right:auto;
 }
 
-/* .point0{
+.resultDesc{
+	font-weight: bolder;
+	font-size: 2rem;
+	font-family: SofiaProWeb, Helvetica, Arial, sans-serif;
+}
+.img-fluid{
     display: block;
     object-fit: fill;
     max-width:max-content;
     max-height:max-content;
-    min-height: 80%;
+    min-height: 80%;/*  */
     min-width: 80%;
 
     width: 100%;
     height:auto;
-} */
+}
 
-/* .rsltBtn{                 @@@@@ORIGINAL@@@@@
-    background-color: #00c73c;
-    color: white;
-    position:relative;
-    text-align: center;
-    display: block;
-    border-color: transparent;
-} */
+.pick0, .pick1, .rbclass {
+	opacity: 0;
+}
 
 .rbclass{
     text-align: center;
@@ -128,19 +130,19 @@
 
 
 .speechBubble{
-    color: orange;
+    color: white;
     font-weight: bold;
     position: relative;
     text-align: center;
 }
 
 .popBubble{
-    background-color: whitesmoke;
-    border-radius: 20px;
+    background-color: #cc835c;
+    /* border-radius: 20px; */
     display: block;
     width: 100%;
-    border-color: burlywood;
-    border:0px;
+    /* border-color: burlywood; */
+    border: 0px;
     font-size: 20px;
     position: relative;
 }
@@ -149,9 +151,4 @@
     background-color: grey;
     color: white;
 } */
-
-.pick0{
-    color: darkkhaki;
-    position: relative;
-}
 

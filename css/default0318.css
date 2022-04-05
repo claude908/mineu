@@ -1,27 +1,25 @@
-/*body{
-    background: slategray;
-}*/
+body{
+    font-family: 'Gowun Batang', serif;
+/*     font-family: 'Nanum Gothic', sans-serif;
+ */}
+
 html,
 body {
     min-height: fit-content;
     min-width: fit-content;
     height: 100%;
     width: auto;
-    background-color: #F9F9F9;
+    background-color: #e6e6e6cb;
 /*     background: radial-gradient(ellipse at center, #fffeea 0%, #fffeea 35%, #b7e8eb 100%);
  */    z-index:0;
     /*background-repeat:no-repeat;*/
   }
 
-*{
+/* *{
     font-family: 'Nanum Gothic', sans-serif;
-}
+} */
 
 #site-header{
     background-color: white;
     border-bottom: #E0E0E0 solid;
-}
-
-.page-id-304 .entry-title {
-    display: none;
 }
