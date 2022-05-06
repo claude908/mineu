@@ -1,0 +1,93 @@
+<svg width="105" height="105" viewBox="0 0 105 105" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+    <circle cx="12.5" cy="12.5" r="12.5">
+        <animate attributeName="fill-opacity"
+         begin="0s" dur="1s"
+         values="1;.2;1" calcMode="linear"
+         repeatCount="indefinite" />
+    </circle>
+    <circle cx="12.5" cy="52.5" r="12.5" fill-opacity=".5">
+        <animate attributeName="fill-opacity"
+         begin="100ms" dur="1s"
+         values="1;.2;1" calcMode="linear"
+         repeatCount="indefinite" />
+    </circle>
+    <circle cx="52.5" cy="12.5" r="12.5">
+        <animate attributeName="fill-opacity"
+         begin="300ms" dur="1s"
+         values="1;.2;1" calcMode="linear"
+         repeatCount="indefinite" />
+    </circle>
+    <circle cx="52.5" cy="52.5" r="12.5">
+        <animate attributeName="fill-opacity"
+         begin="600ms" dur="1s"
+         values="1;.2;1" calcMode="linear"
+         repeatCount="indefinite" />
+    </circle>
+    <circle cx="92.5" cy="12.5" r="12.5">
+        <animate attributeName="fill-opacity"
+         begin="800ms" dur="1s"
+         values="1;.2;1" calcMode="linear"
+         repeatCount="indefinite" />
+    </circle>
+    <circle cx="92.5" cy="52.5" r="12.5">
+        <animate attributeName="fill-opacity"
+         begin="400ms" dur="1s"
+         values="1;.2;1" calcMode="linear"
+         repeatCount="indefinite" />
+    </circle>
+    <circle cx="12.5" cy="92.5" r="12.5">
+        <animate attributeName="fill-opacity"
+         begin="700ms" dur="1s"
+         values="1;.2;1" calcMode="linear"
+         repeatCount="indefinite" />
+    </circle>
+    <circle cx="52.5" cy="92.5" r="12.5">
+        <animate attributeName="fill-opacity"
+         begin="500ms" dur="1s"
+         values="1;.2;1" calcMode="linear"
+         repeatCount="indefinite" />
+    </circle>
+    <circle cx="92.5" cy="92.5" r="12.5">
+        <animate attributeName="fill-opacity"
+         begin="200ms" dur="1s"
+         values="1;.2;1" calcMode="linear"
+         repeatCount="indefinite" />
+    </circle>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></svg>
